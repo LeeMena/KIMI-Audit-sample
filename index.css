@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 36 30% 52%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 36 30% 52%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 36 30% 52%;
+    --radius: 0.5rem;
+    --gold: 36 30% 52%;
+    --gold-light: 36 25% 65%;
+    --gold-dark: 36 35% 40%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-serif {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-sans {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply text-[11px] font-medium tracking-[0.2em] uppercase text-[#b8a080] mb-4;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-36 px-6 md:px-12 lg:px-20;
+  }
+
+  .container-luxury {
+    @apply max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 bg-[#b8a080] text-[#0a0a0a] text-xs font-medium tracking-[0.15em] uppercase transition-all duration-300 hover:bg-[#c9b89a];
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-[#3a3a3a] text-[#e8e8e8] text-xs font-medium tracking-[0.15em] uppercase transition-all duration-300 hover:border-[#b8a080] hover:text-[#b8a080];
+  }
+
+  .text-gold {
+    @apply text-[#b8a080];
+  }
+
+  .bg-gold {
+    @apply bg-[#b8a080];
+  }
+
+  .border-gold {
+    @apply border-[#b8a080];
+  }
+
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.95) 100%);
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:border-[#b8a080]/30;
+  }
+
+  .divider-gold {
+    @apply w-12 h-px bg-[#b8a080] mx-auto;
+  }
+
+  .gradient-fade-bottom {
+    background: linear-gradient(180deg, transparent 0%, rgba(10,10,10,0.8) 60%, rgba(10,10,10,1) 100%);
+  }
+
+  .gradient-fade-top {
+    background: linear-gradient(0deg, transparent 0%, rgba(10,10,10,0.8) 60%, rgba(10,10,10,1) 100%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* Selection */
+::selection {
+  background: rgba(184, 160, 128, 0.3);
+  color: #e8e8e8;
+}
